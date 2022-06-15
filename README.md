@@ -1,3 +1,2 @@
-# GPT-Tokenizer
-
-A description of this package.
+# GPT 2/3 Tokenizer in Swift
+Small Swift library for GPT-2/3 tokenization. It uses the amazing code from [HuggingFace](https://github.com/huggingface/swift-coreml-transformers) without the need to install the entire CoreML library and models.

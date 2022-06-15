@@ -20,9 +20,15 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "GPT-Tokenizer",
-            dependencies: []),
+            dependencies: [],
+            resources: [
+                .process("Resources/gpt2-vocab.json"),
+                .process("Resources/gpt2-merges.txt")
+            ]),
         .testTarget(
             name: "GPT-TokenizerTests",
-            dependencies: ["GPT-Tokenizer"]),
+            dependencies: ["GPT-Tokenizer"],
+            resources: [.process("Resources/encoded_tokens.json")]
+        ),
     ]
 )
